@@ -9,13 +9,13 @@ The plugin automatically discovers project-specific commands and test patterns, 
 ## Installation
 
 ```bash
-/plugin marketplace add eveld/claude
-/plugin install workflows@eveld-claude
+/plugin marketplace add gregoryhunt/claude
+/plugin install workflows@gregoryhunt-claude
 ```
 
 Manual installation:
 ```bash
-git clone https://github.com/eveld/claude.git
+git clone https://github.com/gregoryhunt/claude.git
 ln -s $(pwd) ~/.claude/plugins/workflows
 ```
 
@@ -33,7 +33,7 @@ Starting with v1.3.0, documents use personal/shared namespaces for collaboration
 
 ```
 thoughts/
-├── erik/                    # Personal workspace (WIP)
+├── greg/                    # Personal workspace (WIP)
 │   ├── 0001-auth-system/
 │   │   ├── research.md
 │   │   ├── plan.md
@@ -44,7 +44,7 @@ thoughts/
 │   └── 0001-cache-layer/
 │       └── research.md
 ├── shared/                  # Published team documents
-│   ├── 0042-auth-system/   # Shared from erik/0001
+│   ├── 0042-auth-system/   # Shared from greg/0001
 │   │   ├── research.md
 │   │   ├── plan.md
 │   │   └── changelog.md
@@ -70,15 +70,15 @@ thoughts/
 When ready to share personal documents with the team:
 
 ```bash
-/workflows:share thoughts/erik/0001-auth-system
+/workflows:share thoughts/greg/0001-auth-system
 
 # Workflow:
 # 1. Pulls latest from git
 # 2. Finds next shared number (e.g., 0042)
-# 3. Copies erik/0001-auth-system → shared/0042-auth-system
+# 3. Copies greg/0001-auth-system → shared/0042-auth-system
 # 4. Updates frontmatter in both copies
 # 5. Commits and pushes immediately
-# 6. Reports: ✅ Shared erik/0001-auth-system → shared/0042-auth-system
+# 6. Reports: ✅ Shared greg/0001-auth-system → shared/0042-auth-system
 ```
 
 **Benefits**:
@@ -167,6 +167,10 @@ Specialized agents with isolated contexts for focused tasks:
 - `gcp-locator/analyzer/pattern-finder` - GCP Cloud Logging
 - `k8s-locator/analyzer/pattern-finder` - Kubernetes diagnostics
 - `linear-locator/analyzer/pattern-finder` - Linear issue tracking
+
+## Credits
+
+Originally created by [Erik Veld](https://github.com/eveld/claude). Forked and maintained by [Gregory Hunt](https://github.com/gregoryhunt/claude).
 
 ## License
 

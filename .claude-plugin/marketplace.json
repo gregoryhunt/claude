@@ -1,14 +1,14 @@
 {
-  "name": "eveld-claude",
+  "name": "gregoryhunt-claude",
   "owner": {
-    "name": "Erik Veld"
+    "name": "Gregory Hunt"
   },
   "plugins": [
     {
       "name": "workflows",
       "source": "./",
       "description": "Custom research, planning, and implementation workflows with agent-awareness and platform debugging orchestration (GCP, Kubernetes, Linear)",
-      "version": "1.2.2"
+      "version": "1.4.0"
     }
   ]
 }

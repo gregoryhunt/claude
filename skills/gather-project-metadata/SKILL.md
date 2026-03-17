@@ -54,7 +54,7 @@ Insert gathered metadata into frontmatter:
 date: 2025-12-23T10:30:00Z
 git_commit: abc123...
 branch: main
-repository: github.com/eveld/claude
+repository: github.com/gregoryhunt/claude
 ---
 ```
 

@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **Migration Guide**: The `/workflows:upgrade` command reads this file to understand how to migrate projects between versions. Each version's Migration section contains the steps the upgrade orchestrator will follow.
 
+## [1.4.0] - 2026-03-17
+
+### Changed
+- Forked plugin under `gregoryhunt/claude`
+- Updated all references from `eveld` to `gregoryhunt`
+- Updated author and ownership metadata
+
+### Migration
+
+**From v1.3.0 to v1.4.0:**
+
+No migration needed — this is a metadata/ownership change only. All directory structures, skills, agents, and workflows remain identical.
+
 ## [1.3.0] - 2026-02-03
 
 ### Added
