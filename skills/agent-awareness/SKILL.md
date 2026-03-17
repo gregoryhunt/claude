@@ -44,6 +44,26 @@ You have access to specialized agents that are MORE EFFICIENT than basic tools. 
 - Better than: Reading multiple files manually to understand error
 - Example: "Analyze this panic: nil pointer dereference at handler.go:42"
 
+**Implementing UI from Figma designs?**
+→ Use `figma-analyzer` agent + `figma-awareness` skill
+- Better than: Glancing at Figma and coding immediately
+- MUST analyze every element before writing any template code
+- Example: "Implement this screen from the Figma design"
+- See also: `figma-to-code-research` and `figma-interaction-discovery` skills
+
+**Debugging a Temporal workflow failure?**
+→ Use `temporal-debugger` agent
+- Better than: Manually running temporal CLI commands
+- Better than: Only checking the Temporal UI (hides nested failures)
+- Example: "Debug why the document upload workflow failed"
+- See also: `temporal-awareness` skill
+
+**Dealing with Alembic migration conflicts?**
+→ Use `alembic-advisor` agent
+- Better than: Manually running alembic commands and guessing
+- Example: "We have multiple migration heads, how do we resolve?"
+- See also: `alembic-awareness` skill
+
 ## Available Agents
 
 | Task Type | Use This subagent_type |
@@ -55,6 +75,9 @@ You have access to specialized agents that are MORE EFFICIENT than basic tools. 
 | Analyzing documents | `thoughts-analyzer` |
 | Web research | `web-search-researcher` |
 | Analyzing errors | `error-analyzer` |
+| Figma design analysis | `figma-analyzer` |
+| Temporal workflow debugging | `temporal-debugger` |
+| Alembic migration conflicts | `alembic-advisor` |
 
 ## Implementation Agents
 
@@ -63,6 +86,14 @@ During implementation, use aggressive agent orchestration:
 - Keep main agent under 40k tokens per phase
 - Use sub-agents for file reading, pattern finding, testing, verification
 - 60% token reduction per phase
+
+## Domain-Specific Skills
+
+When working on specific domains, check the awareness skill first:
+- **Figma/UI work** → check `figma-awareness` skill
+- **Temporal workflows** → check `temporal-awareness` skill
+- **Database migrations** → check `alembic-awareness` skill
+- **HTMX/Jinja2 templates** → check `htmx-jinja-patterns` skill
 
 ## When to Use Agents
 
